@@ -1,0 +1,22 @@
+# Ambiente virtual
+venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos do banco de dados SQLite (se você estiver usando SQLite)
+*.sqlite3
+
+# Arquivos de configuração local (por exemplo, configurações de banco de dados)
+local_settings.py
+
+# Arquivos e diretórios de log
+logs/
+*.log
+
+# Diretórios de mídia e estáticos gerados automaticamente
+static/
+media/
