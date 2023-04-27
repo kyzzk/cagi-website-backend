@@ -18,5 +18,5 @@ logs/
 *.log
 
 # Diretórios de mídia e estáticos gerados automaticamente
-static/
 media/
+.idea
