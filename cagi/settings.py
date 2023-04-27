@@ -89,26 +89,26 @@ JAZZMIN_SETTINGS = {
 
 # LOCAL
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
-
-# DEPLOY RENDER
-
-#
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'cagi',
-#         'USER': 'cagi',
-#         'PASSWORD': 'etlJS0wRk8aaxOp2CjVmDhGNVohczrej',
-#         'HOST': 'dpg-ch5ebkcs3fviflg2ejhg-a.oregon-postgres.render.com',
-#         'PORT': '5432',
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
 #     }
 # }
+
+#DEPLOY RENDER
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cagi',
+        'USER': 'cagi',
+        'PASSWORD': 'etlJS0wRk8aaxOp2CjVmDhGNVohczrej',
+        'HOST': 'dpg-ch5ebkcs3fviflg2ejhg-a.oregon-postgres.render.com',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
