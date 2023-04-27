@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-@x_y(ro=mkb5kn9f@59+*_73_mszy7z^jp49pbv)6ajn)gdl1-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -87,9 +87,13 @@ JAZZMIN_SETTINGS = {
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'cagi',
+        'USER': 'cagi',
+        'PASSWORD': 'etlJS0wRk8aaxOp2CjVmDhGNVohczrej',
+        'HOST': 'dpg-ch5ebkcs3fviflg2ejhg-a.oregon-postgres.render.com',
+        'PORT': '5432',
     }
 }
 
