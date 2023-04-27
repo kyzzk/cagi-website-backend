@@ -3,6 +3,8 @@ from django_resized import ResizedImageField
 from django.utils.html import format_html
 
 from uuid import uuid4
+
+import socket
 import os
 
 
@@ -28,8 +30,16 @@ class Usuario(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Atualizado Em")
 
     def foto_de_perfil(self):
+        hostname = socket.gethostname()
+        ip_address = socket.gethostbyname(hostname)
+
+        if ip_address == "192.168.1.5":
+            base_url = "http://127.0.0.1:8000"
+        else:
+            base_url = "https://cagi-backend-api.onrender.com"
+
         if self.foto_perfil:
-            return format_html(f'<img style="width=100px;height:100px;" src="http://127.0.0.1:8000/{self.foto_perfil}"/>')
+            return format_html(f'<img style="width=100px;height:100px;" src="{base_url}/{self.foto_perfil}"/>')
         else:
             return format_html('<p>Sem imagem de Perfil</>')
 
